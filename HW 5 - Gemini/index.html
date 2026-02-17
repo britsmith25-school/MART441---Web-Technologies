@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Delivery: A Text Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Neon Delivery</h1>
+        <div id="image-frame">
+            <img id="story-image" src="https://picsum.photos/id/122/600/300" alt="Adventure Scene">
+        </div>
+        <div id="story-text">
+            You wake up in a rain-slicked alleyway holding a glowing briefcase. A terminal in front of you blinks: 
+            <strong>"Where to, Courier? [North] or [South]?"</strong>
+        </div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your choice here..." autofocus>
+            <button onclick="processInput()">Submit</button>
+        </div>
+        <button id="restart-btn" style="display:none;" onclick="restartGame()">Restart Story</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
