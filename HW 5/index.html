@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Choices</title>
+    <style>
+    #ImagesContainer {
+        width: 400px;
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    #storyImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Morning Choices</h1>
+
+    <div id="story">
+    Congratulations, it's yet another Monday morning, and your alarm is going off once again.<br><br>
+    Do you <strong>get up to shower (shower)</strong> or <strong>doomscroll your phone (phone)</strong>?
+    </div>
+
+    <input type="text" id="userInput" placeholder="Type your choice here...">
+    <button onclick="HandleChoice()">Submit</button>
+
+    <div id="ImagesContainer">
+        <img id="storyImage" src="images/MessyBed.jpg" alt="Waking up">
+    </div>
+
+    <div id="restart" style="display:none;">
+        <button onclick="restartStory()">It was all a dream! Start again?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
