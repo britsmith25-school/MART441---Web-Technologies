@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Game Results</h1>
+
+<div id="results"></div>
+
+<button onclick="playAgain()">Play Again</button>
+<button onclick="resetGame()">Reset</button>
+
+<script>
+    let player = JSON.parse(localStorage.getItem("playerData"));
+
+    if (!player) {
+        window.location.href = "index.html";
+    }
+
+    document.getElementById("results").innerHTML = `
+        <h2>🎉 Congrats, ${player.firstName} ${player.lastName}!</h2>
+        <p>You won the game!</p>
+        <p>It took <strong>${player.attempts}</strong> attempts.</p>
+        <p>Would you like to play again?</p>
+    `;
+
+    function playAgain() {
+        player.attempts = 0;
+        localStorage.setItem("playerData", JSON.stringify(player));
+        window.location.href = "game.html";
+    }
+
+    function resetGame() {
+        localStorage.clear();
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>
