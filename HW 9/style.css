@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  color: #F1FAEE;
+  font-family: Arial, sans-serif;
+  background: #2A2E45;
+}
+#mainImage {
+  position: absolute;
+  width: 350px;
+  max-width: 80vw;
+}
+#textBox {
+  position: absolute;
+  font-size: 24px;
+  top: 50%;
+  left: 20%;
+  color: #F1FAEE;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+
+#shape {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  top: 200px;
+  left: 300px;
+}
